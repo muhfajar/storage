@@ -25,6 +25,10 @@ export default {
         if (obj?.httpMetadata.contentLanguage) headers['content-language'] = obj?.httpMetadata.contentLanguage;
         if (obj?.httpMetadata.cacheControl) headers['cache-control'] = obj?.httpMetadata.cacheControl;
         if (obj?.httpMetadata.cacheExpiry) headers['expires'] = obj?.httpMetadata.cacheExpiry.toUTCString();
+
+        // CORS headers
+        headers['access-control-allow-origin'] = <string>request.headers.get('origin');
+
         return new Response(obj?.body, {
             headers
         });
