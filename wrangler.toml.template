@@ -1,0 +1,8 @@
+name = "storage"
+main = "src/index.ts"
+compatibility_date = "2022-05-11"
+account_id = "xxxx-xxxx-xxxx"
+
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "storage"
